@@ -1,0 +1,12 @@
+/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/ProdutoNetApplication.java
+/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/controller/CategoriaController.java
+/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/controller/MenuController.java
+/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/controller/ProdutoController.java
+/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/Categoria.java
+/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/CategoriaRepository.java
+/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/DadosAlteracaoCategoria.java
+/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/DadosAlteracaoProduto.java
+/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/DadosCadastroCategoria.java
+/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/DadosCadastroProduto.java
+/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/Produto.java
+/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/ProdutoRepository.java
