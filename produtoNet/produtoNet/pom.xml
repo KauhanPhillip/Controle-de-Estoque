@@ -19,7 +19,7 @@
     <description>Cadastro de produtos de determinada categoria</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>
