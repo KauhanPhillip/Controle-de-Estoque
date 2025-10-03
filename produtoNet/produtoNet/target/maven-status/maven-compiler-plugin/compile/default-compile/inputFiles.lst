@@ -1,12 +1,15 @@
-/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/ProdutoNetApplication.java
-/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/controller/CategoriaController.java
-/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/controller/MenuController.java
-/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/controller/ProdutoController.java
-/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/Categoria.java
-/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/CategoriaRepository.java
-/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/DadosAlteracaoCategoria.java
-/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/DadosAlteracaoProduto.java
-/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/DadosCadastroCategoria.java
-/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/DadosCadastroProduto.java
-/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/Produto.java
-/home/ubuntu/produtoNet/src/main/java/com/example/produtoNet/model/ProdutoRepository.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\controller\CategoriaController.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\controller\LoteController.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\controller\MenuController.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\controller\ProdutoController.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\model\Categoria.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\model\CategoriaRepository.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\model\DadosAlteracaoCategoria.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\model\DadosAlteracaoProduto.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\model\DadosCadastroCategoria.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\model\DadosCadastroProduto.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\model\Lote.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\model\LoteRepository.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\model\Produto.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\model\ProdutoRepository.java
+C:\Users\kauha\Desktop\Faculdade\Tópicos em Técnologia - Jaqueline\produtoNet2\produtoNet\produtoNet\src\main\java\com\example\produtoNet\ProdutoNetApplication.java

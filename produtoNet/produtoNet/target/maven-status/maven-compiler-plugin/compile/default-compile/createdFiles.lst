@@ -1,0 +1,15 @@
+com\example\produtoNet\controller\ProdutoController.class
+com\example\produtoNet\controller\MenuController.class
+com\example\produtoNet\model\Categoria.class
+com\example\produtoNet\model\LoteRepository.class
+com\example\produtoNet\ProdutoNetApplication.class
+com\example\produtoNet\controller\LoteController.class
+com\example\produtoNet\controller\CategoriaController.class
+com\example\produtoNet\model\CategoriaRepository.class
+com\example\produtoNet\model\DadosCadastroCategoria.class
+com\example\produtoNet\model\Produto.class
+com\example\produtoNet\model\DadosAlteracaoCategoria.class
+com\example\produtoNet\model\Lote.class
+com\example\produtoNet\model\ProdutoRepository.class
+com\example\produtoNet\model\DadosAlteracaoProduto.class
+com\example\produtoNet\model\DadosCadastroProduto.class
