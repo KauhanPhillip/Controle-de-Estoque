@@ -19,6 +19,7 @@
     <description>Cadastro de produtos de determinada categoria</description>
 
     <properties>
+        <!-- Mantemos a propriedade Java 17 -->
         <java.version>17</java.version>
     </properties>
 
@@ -89,20 +90,20 @@
 
         <plugins>
             <!--
-                ADICIONADO ESTE BLOCO: Configuração explícita para o compilador Maven.
-                A tag <release> é a maneira moderna de forçar a versão do bytecode,
-                prevenindo o erro 'versão de lançamento X não suportada'.
+                MUDANÇA CRÍTICA AQUI: Removemos <release> e voltamos para <source> e <target>.
+                Isso deve ser mais tolerante com o JDK antigo do Vercel, enquanto ainda compila para o bytecode 17.
             -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <!-- Usando uma versão estável mais recente (3.11.0) -->
                 <version>3.11.0</version>
                 <configuration>
+                    <!-- Mantemos a exigência do código-fonte ser Java 17 -->
                     <source>${java.version}</source>
+                    <!-- Forçamos o bytecode a ser compatível com Java 17 -->
                     <target>${java.version}</target>
-                    <!-- Força o uso da versão do Java no ambiente de build -->
-                    <release>${java.version}</release>
+                    <!-- Novo: Adicionamos o fork para a execução ser compatível com JDKs mais antigos -->
+                    <fork>true</fork>
                 </configuration>
             </plugin>
 
