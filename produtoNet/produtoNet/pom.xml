@@ -88,6 +88,24 @@
         </resources>
 
         <plugins>
+            <!--
+                ADICIONADO ESTE BLOCO: Configuração explícita para o compilador Maven.
+                A tag <release> é a maneira moderna de forçar a versão do bytecode,
+                prevenindo o erro 'versão de lançamento X não suportada'.
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <!-- Usando uma versão estável mais recente (3.11.0) -->
+                <version>3.11.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <!-- Força o uso da versão do Java no ambiente de build -->
+                    <release>${java.version}</release>
+                </configuration>
+            </plugin>
+
             <!-- Plugin do Spring Boot -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
