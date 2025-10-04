@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.5</version>
+        <version>3.5.5</version> <!-- Versão do Spring Boot 3 -->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -19,7 +19,7 @@
     <description>Cadastro de produtos de determinada categoria</description>
 
     <properties>
-        <!-- Mantemos a propriedade Java 17 -->
+        <!-- Configuração para Java 17, essencial para Spring Boot 3 -->
         <java.version>17</java.version>
     </properties>
 
@@ -70,7 +70,7 @@
 
     <build>
         <resources>
-            <!-- application.properties SEM filtering -->
+            <!-- application.properties SEM filtering (Geralmente não contém variáveis Maven) -->
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>false</filtering>
@@ -78,7 +78,7 @@
                     <include>application.properties</include>
                 </includes>
             </resource>
-            <!-- outros arquivos de resources COM filtering (se precisar) -->
+            <!-- outros arquivos de resources COM filtering (se precisar, ex: application.yml) -->
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
@@ -90,22 +90,9 @@
 
         <plugins>
             <!--
-                MUDANÇA CRÍTICA AQUI: Removemos <release> e voltamos para <source> e <target>.
-                Isso deve ser mais tolerante com o JDK antigo do Vercel, enquanto ainda compila para o bytecode 17.
+                IMPORTANTE: A configuração explícita do maven-compiler-plugin foi removida.
+                O spring-boot-starter-parent agora deve gerenciar a compilação, resolvendo o problema 'javac: No such file'.
             -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
-                <configuration>
-                    <!-- Mantemos a exigência do código-fonte ser Java 17 -->
-                    <source>${java.version}</source>
-                    <!-- Forçamos o bytecode a ser compatível com Java 17 -->
-                    <target>${java.version}</target>
-                    <!-- Novo: Adicionamos o fork para a execução ser compatível com JDKs mais antigos -->
-                    <fork>true</fork>
-                </configuration>
-            </plugin>
 
             <!-- Plugin do Spring Boot -->
             <plugin>
