@@ -8,8 +8,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.5</version> <!-- Versão do Spring Boot 3 -->
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>3.5.5</version>
+        <relativePath/>
     </parent>
 
     <groupId>com.example</groupId>
@@ -19,12 +19,10 @@
     <description>Cadastro de produtos de determinada categoria</description>
 
     <properties>
-        <!-- Versão Java necessária para runtime do Spring Boot 3 -->
         <java.version>17</java.version>
     </properties>
 
     <dependencies>
-        <!-- Web + Thymeleaf -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -34,14 +32,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- Layout Dialect para Thymeleaf -->
         <dependency>
             <groupId>nz.net.ultraq.thymeleaf</groupId>
             <artifactId>thymeleaf-layout-dialect</artifactId>
             <version>3.2.0</version>
         </dependency>
 
-        <!-- DevTools (para reload no desenvolvimento) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -49,14 +45,12 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- Testes -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
-        <!-- JPA + MySQL -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -70,7 +64,6 @@
 
     <build>
         <resources>
-            <!-- application.properties SEM filtering (Geralmente não contém variáveis Maven) -->
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>false</filtering>
@@ -78,7 +71,6 @@
                     <include>application.properties</include>
                 </includes>
             </resource>
-            <!-- outros arquivos de resources COM filtering (se precisar, ex: application.yml) -->
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
@@ -89,10 +81,6 @@
         </resources>
 
         <plugins>
-            <!--
-                1. Configuração do Compilador para Java 17.
-                Usamos uma versão 3.11.0 para compatibilidade do Spring Boot 3.
-            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -103,10 +91,6 @@
                 </configuration>
             </plugin>
 
-            <!--
-                2. Plugin Toolchains: Força o Maven a usar um JDK 17 específico
-                para compilação, o que pode resolver o problema do '--release 17'.
-            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-toolchains-plugin</artifactId>
@@ -127,13 +111,11 @@
                 </configuration>
             </plugin>
 
-            <!-- Plugin do Spring Boot -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <!-- Plugin de resources com UTF-8 forçado -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
