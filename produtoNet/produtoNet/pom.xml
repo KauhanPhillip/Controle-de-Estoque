@@ -19,10 +19,7 @@
     <description>Cadastro de produtos de determinada categoria</description>
 
     <properties>
-        <!--
-            MANTÉM a versão 17 para o Spring Boot rodar (runtime),
-            conforme necessário para o Spring Boot 3.
-        -->
+        <!-- Versão Java necessária para runtime do Spring Boot 3 -->
         <java.version>17</java.version>
     </properties>
 
@@ -93,18 +90,40 @@
 
         <plugins>
             <!--
-                MUDANÇA CRÍTICA: Forçamos a compilação para Target/Source 8 (Java 1.8)
-                na esperança de que o JDK mais antigo (com suporte garantido) pare
-                de emitir o erro "release 17 not supported" no Vercel.
-                A versão 3.8.1 do plugin é a mais estável para essa configuração.
+                1. Configuração do Compilador para Java 17.
+                Usamos uma versão 3.11.0 para compatibilidade do Spring Boot 3.
             -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.11.0</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+
+            <!--
+                2. Plugin Toolchains: Força o Maven a usar um JDK 17 específico
+                para compilação, o que pode resolver o problema do '--release 17'.
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-toolchains-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>toolchain</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <toolchains>
+                        <jdk>
+                            <version>17</version>
+                        </jdk>
+                    </toolchains>
                 </configuration>
             </plugin>
 
