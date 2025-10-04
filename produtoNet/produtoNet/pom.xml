@@ -93,18 +93,18 @@
 
         <plugins>
             <!--
-                MUDANÇA CRÍTICA: Forçamos a compilação para Target/Source 11
-                na esperança de que o JDK usado para compilar no Vercel suporte
-                essa versão e pare de emitir o erro "release 17 not supported".
-                A versão 3.8.1 do plugin é mais estável para essa configuração.
+                MUDANÇA CRÍTICA: Forçamos a compilação para Target/Source 8 (Java 1.8)
+                na esperança de que o JDK mais antigo (com suporte garantido) pare
+                de emitir o erro "release 17 not supported" no Vercel.
+                A versão 3.8.1 do plugin é a mais estável para essa configuração.
             -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
 
