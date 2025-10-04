@@ -90,10 +90,8 @@
 
         <plugins>
             <!--
-                CORREÇÃO para "release version 17 not supported":
-                Reduzindo a versão do maven-compiler-plugin para 3.8.1 (mais estável)
-                para evitar que ele use implicitamente a flag --release 17, que está
-                causando problemas no ambiente de build do Vercel.
+                Configuração explícita para forçar source/target 17 e evitar o erro "release 17 not supported" no Vercel.
+                Usamos a versão 3.8.1 do plugin para maior compatibilidade.
             -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
